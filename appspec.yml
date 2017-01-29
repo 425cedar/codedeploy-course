@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: files/newpage.html
+  - source: files/index.html
     destination: /var/www/html
 
 permissions:
@@ -16,4 +16,5 @@ hooks:
   BeforeInstall:
     - location: scripts/webserver-stop.sh
   AfterInstall:
+    - location: scripts/sleep.sh
     - location: scripts/webserver-start.sh
